@@ -2,20 +2,71 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <title>Otel QR Menü</title>
+  <title>Sarıkonak Hotel QR Menü</title>
   <style>
-    body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
-    button { display: block; width: 80%; margin: 15px auto; padding: 15px; font-size: 18px; }
+    body {
+      background: #000 url('arkaplan.png') no-repeat center center fixed;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px 20px;
+      color: #fff;
+    }
+
+    .container {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 40px;
+      border-radius: 20px;
+      display: inline-block;
+      box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+    }
+
+    .logo {
+      max-width: 250px;
+      margin-bottom: 40px;
+    }
+
+    .button {
+      display: inline-block;
+      background: linear-gradient(45deg, #b8860b, #ffd700);
+      color: #000;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+      padding: 20px 40px;
+      margin: 15px;
+      font-size: 18px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(255, 215, 0, 0.4);
+      transition: all 0.3s ease;
+    }
+
+    .button:hover {
+      box-shadow: 0 8px 20px rgba(255, 215, 0, 0.7);
+      transform: translateY(-2px);
+    }
+
+    @media(max-width: 768px) {
+      .button {
+        display: block;
+        width: 90%;
+      }
+    }
   </style>
 </head>
 <body>
-  <h1>Hoş Geldiniz</h1>
-  <button onclick="window.open('menu.pdf', '_blank')">Menü</button>
-  <button onclick="window.open('oda-bilgilendirme.pdf', '_blank')">Oda Bilgilendirme</button>
-  <button onclick="window.open('guncel-aydinlatma-metni-sarikonak-hotel.pdf', '_blank')">Güncel Aydınlatma Metni</button>
-  <button onclick="window.open('amasyada-gezilecek-tarihi-yerler.pdf', '_blank')">Amasya'da Gezilecek Yerler</button>
-  <button onclick="window.open('surdurulebilirlik-raporu.pdf', '_blank')">Sürdürülebilirlik Raporu</button>
-  <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSdODp-L1iyGSFi2UO-QUmbV7wgp8JcTrWJucDxcM1vPGuFprQ/viewform?usp=dialog', '_blank')">Oda Misafir Anketi</button>
-  <button onclick="window.open('tarihi-ve-dini-yerlerin-ziyaret-kurallari.pdf', '_blank')">Tarihi ve Dini Yerlerin Ziyaret Kuralları</button>
+  <div class="container">
+    <img src="2.png" alt="Sarıkonak Hotel Logo" class="logo">
+    <div>
+      <button class="button" onclick="window.open('menu.pdf', '_blank')">MENÜ</button>
+      <button class="button" onclick="window.open('oda-bilgilendirme.pdf', '_blank')">ODA BİLGİLENDİRME</button>
+      <button class="button" onclick="window.open('guncel-aydinlatma-metni-sarikonak-hotel.pdf', '_blank')">GÜNCEL AYDINLATMA METNİ</button>
+      <button class="button" onclick="window.open('amasyada-gezilecek-tarihi-yerler.pdf', '_blank')">ANKARA'DA GEZİLECEK TARİHİ YERLER</button>
+      <button class="button" onclick="window.open('surdurulebilirlik-raporu.pdf', '_blank')">SÜRDÜRÜLEBİLİRLİK RAPORU</button>
+      <button class="button" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSdODp-L1iyGSFi2UO-QUmbV7wgp8JcTrWJucDxcM1vPGuFprQ/viewform?usp=dialog', '_blank')">ODA MİSAFİR ANKETİ</button>
+      <button class="button" onclick="window.open('tarihi-ve-dini-yerlerin-ziyaret-kurallari.pdf', '_blank')">TARİHİ VE DİNİ YERLERİN ZİYARET KURALLARI</button>
+    </div>
+  </div>
 </body>
 </html>
+
