@@ -11,7 +11,7 @@
     }
 
     body {
-      background: #000; /* Arka plan rengi koyu siyah */
+      background: #000; /* Sayfanın genel arkaplanı siyah */
       font-family: Arial, sans-serif;
       display: flex;
       justify-content: center;
@@ -20,12 +20,27 @@
     }
 
     .container {
-      background: rgba(0, 0, 0, 0.85);
+      background: url('1.png') no-repeat center center;
+      background-size: cover;
+      position: relative;
       padding: 40px;
       border-radius: 20px;
       box-shadow: 0 0 40px rgba(255, 215, 0, 0.4);
       max-width: 1200px;
       text-align: center;
+    }
+
+    .container::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.75); /* Yarı saydam katman */
+      border-radius: 20px;
+    }
+
+    .container * {
+      position: relative; /* içindeki her şey üstte gözüksün */
+      z-index: 1;
     }
 
     .logo {
@@ -66,7 +81,7 @@
 </head>
 <body>
   <div class="container">
-    <img src="1.png" alt="Sarıkonak Hotel Logo" class="logo">
+    <img src="1" alt="Sarıkonak Hotel Logo" class="logo">
     <div class="button-container">
       <button class="button" onclick="window.open('menu.pdf', '_blank')">MENÜ</button>
       <button class="button" onclick="window.open('oda-bilgilendirme.pdf', '_blank')">ODA BİLGİLENDİRME</button>
