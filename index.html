@@ -17,6 +17,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      padding: 20px;
     }
 
     .container {
@@ -33,19 +34,24 @@
       margin-bottom: 40px;
     }
 
+    .button-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
     .button {
-      display: inline-block;
       background: linear-gradient(45deg, #b8860b, #ffd700);
       color: #000;
       font-weight: bold;
       border: none;
       border-radius: 10px;
       padding: 20px 40px;
-      margin: 15px;
       font-size: 18px;
       cursor: pointer;
       box-shadow: 0 4px 10px rgba(255, 215, 0, 0.4);
       transition: all 0.3s ease;
+      width: 100%;
     }
 
     .button:hover {
@@ -54,9 +60,8 @@
     }
 
     @media(max-width: 768px) {
-      .button {
-        display: block;
-        width: 90%;
+      .button-container {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -64,7 +69,7 @@
 <body>
   <div class="container">
     <img src="sarikonak.png" alt="Sarıkonak Hotel Logo" class="logo">
-    <div>
+    <div class="button-container">
       <button class="button" onclick="window.open('menu.pdf', '_blank')">MENÜ</button>
       <button class="button" onclick="window.open('oda-bilgilendirme.pdf', '_blank')">ODA BİLGİLENDİRME</button>
       <button class="button" onclick="window.open('guncel-aydinlatma-metni-sarikonak-hotel.pdf', '_blank')">GÜNCEL AYDINLATMA METNİ</button>
