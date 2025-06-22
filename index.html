@@ -4,21 +4,28 @@
   <meta charset="UTF-8">
   <title>Sarıkonak Hotel QR Menü</title>
   <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
     body {
-      background: #000 url('arkaplan.png') no-repeat center center fixed;
+      background: url('arkaplan.png') no-repeat center center fixed;
       background-size: cover;
       font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 50px 20px;
-      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .container {
-      background: rgba(0, 0, 0, 0.7);
+      background: rgba(0, 0, 0, 0.75);
       padding: 40px;
       border-radius: 20px;
-      display: inline-block;
-      box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+      box-shadow: 0 0 40px rgba(255, 215, 0, 0.4);
+      max-width: 1200px;
+      text-align: center;
     }
 
     .logo {
@@ -42,8 +49,8 @@
     }
 
     .button:hover {
-      box-shadow: 0 8px 20px rgba(255, 215, 0, 0.7);
-      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(255, 215, 0, 0.8);
+      transform: translateY(-3px);
     }
 
     @media(max-width: 768px) {
@@ -69,4 +76,3 @@
   </div>
 </body>
 </html>
-
