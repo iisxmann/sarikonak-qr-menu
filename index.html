@@ -2,6 +2,7 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sarıkonak Hotel QR Menü</title>
   <style>
     html, body {
@@ -57,9 +58,30 @@
       transform: translateY(-3px);
     }
 
-    @media(max-width: 768px) {
+    @media (max-width: 768px) {
+      body {
+        padding: 10px;
+      }
+      
+      .container {
+        padding: 20px;
+        max-width: 100%;
+        margin: 0;
+      }
+      
+      .logo {
+        max-width: 200px;
+        margin-bottom: 30px;
+      }
+      
       .button-container {
         grid-template-columns: 1fr; /* Mobilde tek sütun */
+        gap: 15px;
+      }
+      
+      .button {
+        padding: 15px 20px;
+        font-size: 16px;
       }
     }
   </style>
